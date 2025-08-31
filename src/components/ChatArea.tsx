@@ -6,7 +6,7 @@ import { chatAPI } from '../utils/api';
 import type { ChatMessage, ChatSession } from '../types';
 
 const ChatArea: React.FC = () => {
-  const { chatHistory, addChatSession, updateChatSession, isLoading, setIsLoading } = useAI();
+  const { addChatSession, updateChatSession, isLoading, setIsLoading } = useAI();
   const [currentSession, setCurrentSession] = useState<ChatSession | null>(null);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);

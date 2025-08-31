@@ -5,6 +5,7 @@ export interface AIModel {
   maxTokens: number;
   temperature: number;
   provider: string;
+  disabled?: boolean;
 }
 
 export interface PromptTemplate {

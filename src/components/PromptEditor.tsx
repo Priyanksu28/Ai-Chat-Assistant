@@ -5,7 +5,7 @@ import Modal from './Modal';
 import type { PromptTemplate } from '../types';
 
 const PromptEditor: React.FC = () => {
-  const { templates, addTemplate, deleteTemplate } = useAI();
+  const { templates, addTemplate } = useAI();
   const [prompt, setPrompt] = useState('');
   const [showTemplateModal, setShowTemplateModal] = useState(false);
   const [newTemplate, setNewTemplate] = useState<Partial<PromptTemplate>>({
