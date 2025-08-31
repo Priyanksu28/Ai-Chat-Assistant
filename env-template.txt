@@ -1,0 +1,8 @@
+# Copy this file to .env and add your actual API keys
+# OpenAI API Key (optional - for GPT models)
+OPENAI_API_KEY=sk-your-actual-openai-api-key-here
+
+# Google Gemini API Key (recommended - free tier available)
+GEMINI_API_KEY=your-actual-gemini-api-key-here
+
+PORT=3001
