@@ -16,7 +16,7 @@ const Header: React.FC = () => {
               </svg>
             </div>
             <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-              AI UI Interface
+              AskAI
             </h1>
           </div>
 
