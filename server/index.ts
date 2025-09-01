@@ -44,8 +44,16 @@ app.post('/api/chat', async (req, res) => {
     console.log('Received chat request:', { message, model, parameters });
     
     // Use Gemini API for AI responses
+    // Map frontend model names to actual Gemini model names
+    let geminiModelName = 'gemini-1.5-flash'; // default
+    if (model === 'gemini-pro') {
+      geminiModelName = 'gemini-1.5-pro';
+    } else if (model === 'gemini-flash') {
+      geminiModelName = 'gemini-1.5-flash';
+    }
+    
     const geminiModel = genAI.getGenerativeModel({ 
-      model: 'gemini-1.5-flash', // Use flash model which might have different quota limits
+      model: geminiModelName,
       generationConfig: {
         temperature: parameters.temperature || 0.7,
         topP: parameters.topP || 1.0,

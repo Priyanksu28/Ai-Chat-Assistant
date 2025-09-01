@@ -6,7 +6,7 @@ import { chatAPI } from '../utils/api';
 import type { ChatMessage, ChatSession } from '../types';
 
 const ChatArea: React.FC = () => {
-  const { addChatSession, updateChatSession, isLoading, setIsLoading } = useAI();
+  const { addChatSession, updateChatSession, isLoading, setIsLoading, currentModel, parameters } = useAI();
   const [currentSession, setCurrentSession] = useState<ChatSession | null>(null);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -24,14 +24,8 @@ const ChatArea: React.FC = () => {
       id: Date.now().toString(),
       title: 'New Chat',
       messages: [],
-      model: 'gpt-4',
-      parameters: {
-        temperature: 0.7,
-        maxTokens: 1000,
-        topP: 1.0,
-        frequencyPenalty: 0.0,
-        presencePenalty: 0.0,
-      },
+      model: currentModel,
+      parameters: parameters,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };
