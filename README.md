@@ -80,7 +80,6 @@
 #### **Technical Stack:**
 - **Frontend**: React 18 + TypeScript + Vite
 - **Styling**: Tailwind CSS v3 + PostCSS
-- **Backend**: Express.js + Node.js
 - **AI Integration**: Google Generative AI SDK
 - **State Management**: React Context API
 - **Build Tool**: Vite with React plugin
@@ -139,7 +138,7 @@
 
 ### Prerequisites
 - Node.js 18+ (recommended: 20.19+ or 22.12+)
-- npm or yarn package manager
+- npm package manager
 - Google AI Studio account for Gemini API key
 
 ### Installation
